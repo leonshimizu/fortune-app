@@ -14,7 +14,7 @@ class MyExamplesController < ApplicationController
     render json: {fortune: fortune}
   end
 
-  def random_number # feature 2
+  def random_number # feature 2 - possibly use .rand(0..60)
     number = Random.new
     numbers = []
 
@@ -26,7 +26,7 @@ class MyExamplesController < ApplicationController
     render json: {random_numbers: numbers}
   end
 
-  def bottles_of_beer # bonus
+  def bottles_of_beer # bonus - figure out if there's a way to fix the format 
     i = 99
     lyrics = ""
     100.times do

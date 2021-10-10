@@ -1,5 +1,5 @@
 class MyExamplesController < ApplicationController
-  def random_fortune # feature 1
+  def random_fortune # feature 1 - possibly use .shuffle or .sample
     number = Random.new
     random_number = number.rand(3)
 
@@ -14,7 +14,7 @@ class MyExamplesController < ApplicationController
     render json: {fortune: fortune}
   end
 
-  def random_number
+  def random_number # feature 2
     number = Random.new
     numbers = []
 
@@ -26,7 +26,7 @@ class MyExamplesController < ApplicationController
     render json: {random_numbers: numbers}
   end
 
-  def bottles_of_beer
+  def bottles_of_beer # bonus
     i = 99
     lyrics = ""
     100.times do

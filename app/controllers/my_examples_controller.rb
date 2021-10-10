@@ -16,8 +16,17 @@ class MyExamplesController < ApplicationController
 
   def random_number
     number = Random.new
-    random_number = number.rand(60)
+    numbers = []
+
+    6.times do
+      random_number = number.rand(60)
+      numbers << random_number
+    end
     
-    render json: {number: random_number}
+    render json: {random_numbers: numbers}
   end
+
+  # def bottles_of_beer
+
+  # end
 end

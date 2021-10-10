@@ -13,4 +13,11 @@ class MyExamplesController < ApplicationController
 
     render json: {fortune: fortune}
   end
+
+  def random_number
+    number = Random.new
+    random_number = number.rand(60)
+    
+    render json: {number: random_number}
+  end
 end
